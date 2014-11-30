@@ -19,6 +19,7 @@ public:
 		MESSAGE_HANDLER(WM_CLOSE, OnClose)
 		MESSAGE_HANDLER(WM_QUIT,	OnQuit)
 		MESSAGE_HANDLER(WM_CREATE, OnCreate)
+		MESSAGE_HANDLER(WM_PAINT, OnPaint)
 
 		COMMAND_HANDLER(CREATE_BTN_ID, 0, OnCreateBtnDown)	
 		COMMAND_HANDLER(Close_BTN_ID, 0, OnCloseBtnDown)	
@@ -29,9 +30,10 @@ public:
 	~ZJBaseWnd();
 
 	//Message Functions
-	LRESULT OnClose	(UINT nMsg,	WPARAM wParam,	LPARAM lParam, BOOL &bHandled);
-	LRESULT OnQuit	(UINT nMsg,	WPARAM wParam,	LPARAM lParam, BOOL &bHandled);
-	LRESULT OnCreate(UINT nMsg, WPARAM wParam,	LPARAM lParam, BOOL &bHandled);
+	LRESULT OnClose	(UINT nMsg,	WPARAM wParam, LPARAM lParam, BOOL &bHandled);
+	LRESULT OnQuit	(UINT nMsg,	WPARAM wParam, LPARAM lParam, BOOL &bHandled);
+	LRESULT OnCreate(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled);
+	LRESULT OnPaint	(UINT nMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled);
 
 	LRESULT OnCreateBtnDown(WPARAM, LPARAM, HWND, BOOL&);
 	LRESULT OnCloseBtnDown(WPARAM, LPARAM, HWND, BOOL&);

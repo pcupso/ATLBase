@@ -5,10 +5,11 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 					   LPTSTR    lpCmdLine,
 					   int       nCmdShow)
 {
-	RECT rc = {200, 100, 600, 400};
+
+	RECT rc = {200, 100, 1000, 700};
 	ZJBaseWnd myWnd;
 
-	DWORD wStyle = WS_OVERLAPPEDWINDOW & ~WS_THICKFRAME & ~WS_MAXIMIZEBOX;
+	DWORD wStyle = WS_OVERLAPPEDWINDOW & ~WS_MAXIMIZEBOX;
 
 	if(NULL == myWnd.Create(NULL, rc, _T("Cda ATL Learn"), wStyle)){
 		return 0;
